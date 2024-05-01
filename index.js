@@ -9,9 +9,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 */
 
 if (document.getElementById("ROOT") instanceof HTMLElement) { var Root = document.getElementById("ROOT") }
-
-// OpenWeatherMap APIKey!
-const APIKEY = "";
+if (document.getElementById("APIKEY_INPUT") instanceof HTMLElement) { var API_INPUT = document.getElementById("APIKEY_INPUT") }
 
 const City_Input = document.getElementById("City");
 const City_Request = document.getElementById("City-Button");
@@ -31,7 +29,7 @@ City_Request.addEventListener("click", () => {
     
         const Requested_City = City_Input.value.toString();
 
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Requested_City}&appid=${APIKEY}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Requested_City}&appid=${API_INPUT.value.toString()}`;
 
         const Xhr = new XMLHttpRequest();
         Xhr.open("GET", apiUrl, true);

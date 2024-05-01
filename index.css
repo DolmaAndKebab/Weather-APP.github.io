@@ -19,6 +19,12 @@ input, label {
     text-align: center;
 }
 
+input {
+    margin-bottom: 1rem !important;
+    width: 15rem !important;
+    height: 2.5rem !important;
+}
+
 button {
     margin: 1rem !important;
     width: 12vw;
